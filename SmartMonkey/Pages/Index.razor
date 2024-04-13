@@ -1,0 +1,81 @@
+﻿@page "/"
+@using SmartMonkey.Objects
+@using System.Timers
+
+@code {
+    private const int PopulationSize = 100;
+    private const string TargetString = "Genetic algorithm 2024";
+    private Population population = new Population();
+    private bool done = false;
+
+    private int generation = 0;
+
+    public string best = "";
+
+    private Timer _timer = new(30); // no limite
+
+    protected override void OnInitialized()
+    {
+        population.Initialize(PopulationSize, TargetString.Length);
+        _timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        if (population.IsFinished(TargetString)) {
+            _timer.Stop();
+            best = population.GetFinal(TargetString);
+            done = true;
+            StateHasChanged();
+            return;
+        }
+
+        _ = InvokeAsync(() =>
+        {
+            NewGen();
+            StateHasChanged();
+        });
+    }
+
+    private void Start()
+    {
+        if (_timer.Enabled)
+        {
+            _timer.Stop();
+        }
+        else
+        {
+            _timer.Start();
+        }
+    }
+
+    public void NewGen() {
+        population.CalculateFitness(TargetString);
+        population.Selection();
+        population.GenerateNextGeneration();
+        generation++;
+        best = population.BestIndividual;
+
+        Console.WriteLine($"Generation: {generation}, Best Fitness: {population.BestFitness}, Best Individual: {population.BestIndividual}");
+    }
+
+    private string GetStyle()
+    {
+        if (done)
+        {
+            return "color: green; font-weight: bold;";
+        }
+        else
+        {
+            return "color: blue; font-style: italic;";
+        }
+    }
+}
+
+<PageTitle>Index</PageTitle>
+
+<h3>Generation : @generation</h3>
+<h3>Best match:</h3>
+<h2 style="@GetStyle()">@best</h2>
+
