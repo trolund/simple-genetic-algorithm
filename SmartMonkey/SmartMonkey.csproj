@@ -7,9 +7,13 @@
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
 
-  <PropertyGroup>
+  <!-- <PropertyGroup>
   <PublishRepositoryUrl>true</PublishRepositoryUrl>
-  <PublishUrl>docs</PublishUrl>
+  </PropertyGroup> -->
+
+  <PropertyGroup>
+    <GHPages>true</GHPages>
+    <GHPagesBase>/Simple-Genetic-algorithm/</GHPagesBase>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' ">
