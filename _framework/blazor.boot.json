@@ -1,7 +1,7 @@
 {
   "entryAssembly": "SmartMonkey",
   "resources": {
-    "hash": "sha256-t6+pdG3HPFUhFv0mKRZP5lLPC9cl+laCOBdBomZw+UE=",
+    "hash": "sha256-wnjtsvUX2iaRymga9/vXy1L8XsEXtAJHUap0DeYdkOI=",
     "runtime": {
       "dotnet.7.0.20.dwptlzpfyy.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -25,7 +25,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-+Ocn1BQJtohBhsgZTM2mUCI8SX4EFb/JVGbVPOzffDY=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-bzbqcJ6KmXNtttCdwlY3JqqzIuFo0rRDUc7qjI8CKYM=",
-      "SmartMonkey.dll": "sha256-ls/POXTpYhDLBzVR9vv2BEzD91Nah2SCH2E3F9AV27I=",
+      "SmartMonkey.dll": "sha256-U+OkzXcogIMktRCEf9iY2Y2XJcn2/DJHB58rWFe8ga0=",
       "System.Collections.Concurrent.dll": "sha256-gCWUPrsQ850DlPqMvuobxnZzPlvwN6d5zMk9LEX83d4=",
       "System.Collections.dll": "sha256-rf4OM/SkjcJV6aMvg3QCqcGlR0LMT4zyLTWNhHiMut4=",
       "System.ComponentModel.dll": "sha256-7vcDBo/3bcYI/CjzxGeFgD2a7r2TJ0a+atwSTcxZv/E=",
